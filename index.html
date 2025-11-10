@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Escape Room - Mật Thất Lịch Sử</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="room">
+        <h1>Escape Room - Mật Thất Lịch Sử</h1>
+        <p>Phát hiện thông tin sai lệch và mở cửa để thoát ra!</p>
+
+        <!-- Video câu đố 1 -->
+        <div class="puzzle">
+            <h2>Câu đố 1: Video về Nguyễn Huệ</h2>
+            <video width="400" controls>
+                <source src="video/nguyenhue_sai.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
+            <p>Thông tin trong video: "Nguyễn Huệ và Quang Trung là hai người khác nhau."</p>
+            <button onclick="checkAnswer(1, true)">Đúng</button>
+            <button onclick="checkAnswer(1, false)">Sai</button>
+            <p id="feedback1" class="feedback"></p>
+        </div>
+
+        <!-- Poster câu đố 2 -->
+        <div class="puzzle">
+            <h2>Câu đố 2: Poster Chiến tranh Việt Nam</h2>
+            <img src="img/poster_vietnam.jpg" alt="Poster VN" width="400">
+            <p>Poster ghi: "Mỹ rút quân khỏi Việt Nam năm 1972."</p>
+            <button onclick="checkAnswer(2, true)">Đúng</button>
+            <button onclick="checkAnswer(2, false)">Sai</button>
+            <p id="feedback2" class="feedback"></p>
+        </div>
+
+        <!-- Cửa thoát -->
+        <div id="door" class="door">
+            <h2>Cửa thoát</h2>
+            <button onclick="tryDoor()">Mở cửa</button>
+            <p id="doorFeedback"></p>
+        </div>
+
+        <p id="scoreDisplay">Điểm: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
