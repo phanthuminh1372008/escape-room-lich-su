@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Escape Room - Mật Thất Lịch Sử</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="room">
+    <h1>Escape Room — Mật Thất Lịch Sử</h1>
+    <p class="lead">Phát hiện thông tin sai lệch trong video / poster để mở cửa thoát!</p>
+
+    <!-- PUZZLE 1: Video Shorts Quang Trung -->
+    <div class="puzzle" id="puzzle-1">
+      <h2>Câu đố 1 — Video ngắn</h2>
+      <!-- YouTube Shorts embed dùng iframe (ID từ link bạn cung cấp) -->
+      <div class="video-wrap">
+        <iframe
+          width="400"
+          height="225"
+          src="https://www.youtube.com/embed/ATWuXsE9S7E"
+          title="Video lịch sử ngắn"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <p class="hint">Nội dung trong video nói: "<strong>Nguyễn Huệ và Quang Trung là hai người khác nhau</strong>".</p>
+      <div class="choices">
+        <button onclick="checkAnswer(1, true)">Đúng</button>
+        <button onclick="checkAnswer(1, false)">Sai</button>
+      </div>
+      <p id="feedback1" class="feedback"></p>
+    </div>
+
+    <!-- PUZZLE 2: Poster (ảnh từ Wikimedia) -->
+    <div class="puzzle" id="puzzle-2">
+      <h2>Câu đố 2 — Poster / Ảnh</h2>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/65/Nguyen_Hue_Emperor.jpg"
+        alt="Quang Trung - Nguyễn Huệ"
+        class="poster" />
+      <p class="hint">Poster chú thích: "<strong>Nguyễn Huệ và Quang Trung là một người</strong>".</p>
+      <div class="choices">
+        <button onclick="checkAnswer(2, true)">Đúng</button>
+        <button onclick="checkAnswer(2, false)">Sai</button>
+      </div>
+      <p id="feedback2" class="feedback"></p>
+    </div>
+
+    <!-- DOOR -->
+    <div class="door" id="door">
+      <h2>Cửa thoát</h2>
+      <p>Hoàn thành tất cả câu đố để mở cửa.</p>
+      <button onclick="tryDoor()">Mở cửa</button>
+      <p id="doorFeedback" class="feedback"></p>
+    </div>
+
+    <div class="status">
+      <p id="scoreDisplay">Điểm: 0</p>
+      <p id="progressDisplay">Tiến độ: 0 / 2</p>
+    </div>
+
+    <footer class="foot">
+      <small>Đề tài: Khảo sát ảnh hưởng của video ngắn về lịch sử đến nhận thức và kỹ năng phản biện của học sinh THPT.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
