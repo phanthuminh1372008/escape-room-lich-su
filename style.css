@@ -1,0 +1,38 @@
+/* style đơn giản, responsive cho game */
+* { box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg,#f5f8fb,#e9f0f7);
+  margin: 0;
+  padding: 20px;
+  color: #111;
+  display: flex;
+  justify-content: center;
+}
+.room {
+  width: 100%;
+  max-width: 760px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+h1 { margin-top: 0; text-align: center; }
+.lead { text-align: center; color: #555; margin-bottom: 14px; }
+.puzzle { border: 1px solid #e1e6ea; padding: 14px; border-radius: 8px; margin-bottom: 16px; }
+.video-wrap { display:flex; justify-content:center; margin-bottom:10px; }
+.poster { display:block; margin: 0 auto 8px; max-width:100%; height:auto; border-radius:6px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.hint { color:#333; margin:8px 0; }
+.choices { display:flex; gap:12px; justify-content:center; margin-top:8px; }
+button { background:#2f80ed; color:#fff; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:15px; }
+button:hover { opacity:0.95; transform: translateY(-1px); }
+button.secondary { background:#f2994a; }
+.feedback { text-align:center; margin-top:10px; font-weight:700; color:#0b6b3a; min-height:22px; }
+.door { border: 2px dashed #c9d6e2; padding:12px; border-radius:8px; text-align:center; background:#f8fbff; margin-bottom:12px; }
+.status { display:flex; justify-content:space-between; padding:10px 6px; color:#444; }
+.foot { text-align:center; margin-top:12px; color:#777; }
+@media (max-width:480px){
+  .video-wrap iframe { width:100%; height:200px; }
+  button { width:120px; }
+  .status { flex-direction:column; gap:6px; align-items:center; }
+}
